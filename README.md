@@ -1,2 +1,0 @@
-# 2023_SE_TermProject
-2023_spring_SE_TermProject
