@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Software Engineering Term Project Online Sponsored Website</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/symbolmark.jpg" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/etc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>ul { list-style: none; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    textarea { font-family: inherit; padding-left: 10px; border: 1px solid #e5e5e5; }
+    label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] { cursor: pointer; }
+    fieldset { margin: 0; padding: 0; border: 0; }
+    legend { display: none; }
+    caption { width: 0; height: 0; line-height: 0; font-size: 0; }
+    ::placeholder { color: #888; }
+    :-ms-input-placeholder { color: #888 !important; }
+    ::-ms-input-placeholder { color: #888 !important; }
+    button { letter-spacing: -0.06em; font-family: 'NanumSquare'; font-size: 16px; background: none; border: none; cursor: pointer; }
+    button:focus { outline: 0; }</style>
+</head>
+<!-- Admin page to manage FAQs. -->
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div>
+            <div class="brand-logo d-flex align-items-center justify-content-between">
+                <a href="./mainPage_admin.html" class="text-nowrap logo-img">
+                    <img src="../assets/images/logos/marklogo-kor_eng.jpg" width="180" alt="" />
+                </a>
+                <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                    <i class="ti ti-x fs-8"></i>
+                </div>
+            </div>
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">Home</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="./mainPage_admin.html" aria-expanded="false">
+                            <span>
+                                <i class="ti ti-layout-dashboard"></i>
+                            </span>
+                            <span class="hide-menu">MainPage</span>
+                </a>
+            </li>
+            <li class="nav-small-cap">
+                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                <span class="hide-menu">ADMINISTRATION</span>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./Review_Management_Page.html" aria-expanded="false">
+                    <span>
+                    <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Review Management</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./Commodity_Management.html" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-alert-circle"></i>
+                    </span>
+                    <span class="hide-menu">Commodity Management</span>
+                </a>
+            </li>
+            <li class="nav-small-cap">
+                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                <span class="hide-menu">Introduction</span>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./sponsors_List_admin.html" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-cards"></i>
+                    </span>
+                    <span class="hide-menu">Sponsors List</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./News_admin.html" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-file-description"></i>
+                    </span>
+                    <span class="hide-menu">News</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./FAQ_admin.html" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-typography"></i>
+                    </span>
+                    <span class="hide-menu">FAQ</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./TeamMembers2.html" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-mood-happy"></i>
+                    </span>
+                    <span class="hide-menu">Team Members</span>
+                </a>
+            </li>
+            <li class="nav-small-cap">
+                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                <span class="hide-menu">AUTH</span>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-login"></i>
+                    </span>
+                    <span class="hide-menu">Login</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                    <span>
+                        <i class="ti ti-user-plus"></i>
+                    </span>
+                    <span class="hide-menu">Register</span>
+                </a>
+            </li>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+        <!--  Header Start -->
+        <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+                <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+            </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+            </a>
+            </li>
+        </ul>
+        <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                <a target="_blank" class="btn btn-primary">Admin</a>
+                <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../assets/images/profile/01_학잠.png" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                    <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                        <i class="ti ti-user fs-6"></i>
+                        <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                        <i class="ti ti-mail fs-6"></i>
+                        <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+
+              <script type="text/javascript">
+
+                function goTabDisplay(obj) {
+                    $('.tab').attr({'aria-hidden' : 'true'});
+                    $('.ui-tab-btn').attr('class', 'ui-tab-btn');
+                    $('.tl').attr('class', 'tl');
+           
+                    $("#btn" + obj).addClass('selected');
+                    $("#t" + obj).addClass('on');
+                    $("#pnl" + obj + '.tab').attr({'aria-hidden' : 'false'});
+                    
+                }
+           </script>
+           <script type="text/javascript">
+               $(document).ready(function () {
+                   var qRow = $('.q-row');
+       
+                   qRow.click(function () {
+                       if ($(this).attr('data-row-toggle') === 'off') {
+                           qRow.attr('data-row-toggle', 'off');
+                           $(this).attr('data-row-toggle', 'on');
+                       } else {
+                           $(this).attr('data-row-toggle', 'off');
+                       }
+                   });
+       
+               });
+       
+               function fn_page(idx) {
+                   $("#pageIndex").val(idx);
+                   $("#bbsListForm").submit();
+               }
+           </script>
+       
+           <div id="contents" class="container faq-container">
+               <!-- 서브 비쥬얼 -->
+               <div class="faq-subvisual">
+                   <div class="contents-area">
+       
+                   </div>
+               </div>
+       
+               <div class="faq-wrap v-con-align">
+                   <div class="contents-area margin50px">
+       
+                       <!--텝 상단 내용 -->
+                       <ul class="tab-list" data-tab-col="5">
+                           <li class="tl on" id="t0">
+                               <button type="button" class="ui-tab-btn selected" id="btn0" onclick="javascript:goTabDisplay(0);">All</button>
+                           </li>
+                           <li class="tl" id="t1">
+                               <button type="button" class="ui-tab-btn" id="btn1" onclick="javascript:goTabDisplay(1);">Sponsorship related</button>
+                           </li>
+                           <li class="tl" id="t2">
+                               <button type="button" class="ui-tab-btn" id="btn2" onclick="javascript:goTabDisplay(2);">Sponsored by overseas</button>
+                           </li>
+                           <li class="tl" id="t3">
+                               <button type="button" class="ui-tab-btn" id="btn3" onclick="javascript:goTabDisplay(3);">Receipt</button>
+                           </li>
+                           <li class="tl" id="t4">
+                               <button type="button" class="ui-tab-btn" id="btn4" onclick="javascript:goTabDisplay(4);">Anniversary donation</button>
+                           </li>
+                           <li class="tl"id="t5">
+                               <button type="button" class="ui-tab-btn" id="btn5" onclick="javascript:goTabDisplay(5);">Other matters</button>
+                           </li>
+                       </ul>
+       
+                       <!--Tap Content -->
+                       <ul class="tab-contents">
+                           <li class="on">
+                               <div>
+                                   <table class="board-table">
+                                       <caption>FAQ</caption>
+       
+                                       <!-- All Content Content -->
+                                       <tbody class="tab" id="pnl0" aria-hidden="false">
+                                           <!-- question -->
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Sponsorship &ensp;&ensp;&ensp;&ensp; related</span>
+                                               </th>
+                                               <th><span>[application for sponsorship] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Sponsored &ensp;&ensp;&ensp;&ensp;by overseas</span>
+                                               </th>
+                                               <th><span>[Sponsored by overseas] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+       
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Receipt</span>
+                                               </th>
+                                               <th><span>[Receipt] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+       
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Anniversary &ensp;&ensp;&ensp;&ensp;donation</span>
+                                               </th>
+                                               <th><span>[Anniversary donation] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Other matters</span>
+                                               </th>
+                                               <th><span>[Other matters] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+       
+       
+       
+                                       </tbody>
+       
+                                       <!-- Sponsorship related Tab -->
+                                       <tbody class="tab" id="pnl1" aria-hidden="true">
+                                           <!-- question -->
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Sponsorship &ensp;&ensp;&ensp;&ensp; related</span>
+                                               </th>
+                                               <th><span>[application for sponsorship] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+       
+       
+                                           <!-- Sponsored by overseas Tap -->
+                                       <tbody class="tab" id="pnl2" aria-hidden="true">
+                                           <!-- question -->
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Sponsored &ensp;&ensp;&ensp;&ensp;by overseas</span>
+                                               </th>
+                                               <th><span>[Sponsored by overseas] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+                                       </tbody>
+       
+       
+                                           <!--Receipt Content tap-->
+                                           <tbody class="tab" id="pnl3" aria-hidden="true">
+                                               <!-- question -->
+           
+                                               <tr class="q-row" data-row-toggle="off">
+                                                   <th>
+                                                       <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                       <span>Receipt</span>
+                                                   </th>
+                                                   <th><span>[Receipt] Test<span></span></span></th>
+                                                   <th>
+                                                    <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                    <p></p>
+                                                    <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                                   </th>
+                                               </tr>
+                                               <!-- Answer -->
+           
+                                               <tr class="a-row">
+                                                   <td colspan="3">
+                                                       <div class="a-wrap">
+                                                           <div class="a-left">
+                                                               <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                           </div>
+                                                           <div class="a-content">
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;">Test&nbsp;</span></font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                       <span style="font-size: 15px;">Test.</span>
+                                                                   </font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;"><br></span></font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                           09:00~18:00</span></font>
+                                                               </p>
+                                                               <p><br></p>
+                                                               <p><br></p>
+                                                           </div>
+                                                       </div>
+                                                   </td>
+                                               </tr>
+                                           </tbody>
+       
+       
+       
+                                               <!-- Anniversary donation Tab -->
+                                       <tbody class="tab" id="pnl4" aria-hidden="true">
+                                           <!-- question -->
+       
+                                           <tr class="q-row" data-row-toggle="off">
+                                               <th>
+                                                   <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                   <span>Anniversary &ensp;&ensp;&ensp;&ensp;donation</span>
+                                               </th>
+                                               <th><span>[Anniversary donation] Test<span></span></span></th>
+                                               <th>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                <p></p>
+                                                <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                               </th>
+                                           </tr>
+                                           <!-- Answer -->
+       
+                                           <tr class="a-row">
+                                               <td colspan="3">
+                                                   <div class="a-wrap">
+                                                       <div class="a-left">
+                                                           <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                       </div>
+                                                       <div class="a-content">
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                   <span style="font-size: 15px;">Test.</span>
+                                                               </font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;"><br></span></font>
+                                                           </p>
+                                                           <p>
+                                                               <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                       style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                       09:00~18:00</span></font>
+                                                           </p>
+                                                           <p><br></p>
+                                                           <p><br></p>
+                                                       </div>
+                                                   </div>
+                                               </td>
+                                           </tr>
+                                       </tbody>
+       
+       
+       
+                                           <!--Other matters Content tap -->
+                                           <tbody class="tab" id="pnl5" aria-hidden="true">
+                                               <!-- question -->
+           
+                                               <tr class="q-row" data-row-toggle="off">
+                                                   <th>
+                                                       <i class="i-q">Q<span class="blind">FAQ question</span></i>
+                                                       <span>Other matters</span>
+                                                   </th>
+                                                   <th><span>[Other matters] Test<span></span></span></th>
+                                                   <th>
+                                                    <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspModify&nbsp&nbsp </span>
+                                                    <p></p>
+                                                    <span style=" background-color: #5D87FF; display: block; border-radius: 3px; color:white;">&nbsp&nbspDelete&nbsp&nbsp </span>
+                                                   </th>
+                                               </tr>
+                                               <!-- Answer -->
+           
+                                               <tr class="a-row">
+                                                   <td colspan="3">
+                                                       <div class="a-wrap">
+                                                           <div class="a-left">
+                                                               <i class="i-a">A<span class="blind">FAQ Answer</span></i>
+                                                           </div>
+                                                           <div class="a-content">
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;">Test&nbsp;</span></font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;">Test.&nbsp;</span></font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic">
+                                                                       <span style="font-size: 15px;">Test.</span>
+                                                                   </font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;"><br></span></font>
+                                                               </p>
+                                                               <p>
+                                                                   <font color="#000000" face="나눔고딕, 나눔, Nanum Gothic"><span
+                                                                           style="font-size: 15px;">● Representative phone call 02-1234-5678 / Weekday
+                                                                           09:00~18:00</span></font>
+                                                               </p>
+                                                               <p><br></p>
+                                                               <p><br></p>
+                                                           </div>
+                                                       </div>
+                                                   </td>
+                                               </tr>
+                                           </tbody>
+       
+       
+                                       
+                                   </table>
+                                   <!-- board-table end -->
+                                   <button type="button" onclick=""><span style=" background-color: #5D87FF; border-radius: 3px; color:white; width:75px; height: 35px; font-weight: bold;">&nbsp&nbspcreate&nbsp&nbsp </span>
+                                   </button>
+                               </div>
+                           </li>
+                       </ul>
+       
+                   </div>
+               </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- The JavaScript file you used. -->
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+</body>
+
+</html>
