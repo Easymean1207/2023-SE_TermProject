@@ -1,4 +1,4 @@
-# Bootstrap w/ Vite
+# Software Enginnerring Term Project #23
 
 Include [Bootstrap](https://getbootstrap.com)'s source Sass and individual JavaScript plugins with [Vite](https://vitejs.dev/).
 
