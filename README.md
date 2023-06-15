@@ -6,7 +6,7 @@
 | 6 Week  | ☑️      | ☑️     | Clean up database & Front-End configuration                                         |
 | 7 Week  |         |        | Midterm exam period                                                                 |
 | 8 Week  | ☑️      | ☑️     | Architectural Patterns ExercisesAssignment                                          |
-| 9 Week  | ☑️      | ☑️     | 디자인 합동 세미나                                                                  |
+| 9 Week  | ☑️      | ☑️     | Review project direction and API usage                                              |
 | 10 Week | ☑️      | ☑️     | Active LearningAssignment                                                           |
 | 11 Week | ☑️      | ☑️     | Complete front-end configuration layout                                             |
 | 12 Week | ☑️      | ☑️     | Additional front-end modifications and feedback                                     |
